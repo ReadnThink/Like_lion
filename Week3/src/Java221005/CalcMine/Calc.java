@@ -1,3 +1,5 @@
+package Java221005.CalcMine;
+
 public class Calc {
 
     private int a;

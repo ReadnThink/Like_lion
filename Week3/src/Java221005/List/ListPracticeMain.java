@@ -1,3 +1,5 @@
+package Java221005.List;
+
 import java.util.List;
 
 public class ListPracticeMain {
@@ -8,5 +10,8 @@ public class ListPracticeMain {
         for (String student: students) {
             System.out.println(student);
         }
+
+
+        System.out.println(students.size());
     }
 }

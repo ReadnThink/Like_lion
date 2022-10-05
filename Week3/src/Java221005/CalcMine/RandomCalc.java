@@ -1,3 +1,5 @@
+package Java221005.CalcMine;
+
 interface Randon{
 
     public void plus();

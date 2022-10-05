@@ -1,4 +1,4 @@
-package RefCalc;
+package Java221005.RandomCalculator;
 
 public class Calculator {
 

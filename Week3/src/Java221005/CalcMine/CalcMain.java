@@ -1,10 +1,11 @@
-public class RandomCalcMain {
+package Java221005.CalcMine;
+
+public class CalcMain {
     public static void main(String[] args) {
-        RandomCalc calc = new RandomCalc(10);
+        Calc calc = new Calc(10, 20);
         calc.plus();
         calc.minus();
         calc.mod();
         calc.div();
-        System.out.println("random : " + calc.getRandom());
     }
 }
