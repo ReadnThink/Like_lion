@@ -7,6 +7,10 @@ public class Calculator {
         System.out.println(first - second);
     }
 
+    public void multi(int first, int second){
+        System.out.println(first * second);
+    }
+
     public void mod(int first, int second){
         System.out.println(first / second);
     }
