@@ -10,7 +10,7 @@ interface Randon{
 public class RandomCalc implements Randon {
     private int a;
 
-    private int random = (int)(Math.random() * 10) + 1;
+    private int random = (int)(Math.random() * 11);
 
     public int getRandom() {
         return random;
@@ -48,6 +48,10 @@ public class RandomCalc implements Randon {
 
     @Override
     public void mod() {
+        if(random == 0){
+            System.out.println("랜덤하게 생성된 숫자가 0입니다");
+            return;
+        }
         System.out.println(a % random);
     }
 }
