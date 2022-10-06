@@ -15,4 +15,15 @@ public class FIleExercise {
             System.out.println(file);
         }
     }
+    /*
+    .\.git
+    .\.idea
+    .\aa_file.txt
+    .\a_file.txt
+    .\InStudyingCodeup
+    .\Like_lion.iml
+    .\out
+    .\README.md
+    .\Week3
+     */
 }
