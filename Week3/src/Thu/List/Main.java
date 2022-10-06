@@ -11,6 +11,6 @@ public class Main {
             System.out.println(student);
         }
 
-        System.out.println(students.size());
+        System.out.println("총인원:" + students.size());
     }
 }
