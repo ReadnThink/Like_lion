@@ -1,6 +1,4 @@
-package Thu.List;
-
-import Thu.Set.NumberGenerator;
+package Thu.Set;
 
 public class RandomNbGenerator implements NumberGenerator {
     @Override
