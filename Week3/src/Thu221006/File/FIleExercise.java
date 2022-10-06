@@ -24,10 +24,20 @@ public class FIleExercise {
         return (char) fileReader.read();
     }
 
+    public String read2Chars(String filename) throws IOException {
+        FileReader fileReader = new FileReader(filename);
+        String str = "";
+        str += (char) fileReader.read();
+        str += (char) fileReader.read();
+
+        return str;
+    }
+
     public static void main(String[] args) throws IOException {
         FIleExercise fIleExercise = new FIleExercise();
-        char c = fIleExercise.readAChar("aa_file.txt");
-        System.out.println(c);
+        String str = fIleExercise.read2Chars("aa_file.txt");
+        //char c = fIleExercise.readAChar("aa_file.txt");
+        System.out.println(str);
     }
 }
 
