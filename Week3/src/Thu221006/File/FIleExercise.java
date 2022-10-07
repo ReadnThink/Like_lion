@@ -17,12 +17,15 @@ public class FIleExercise {
         }
     }
 
+    //1개 읽기
     public char readAChar(String filename) throws IOException {
         FileReader fileReader = new FileReader(filename);
 
       //  System.out.println((char) fileReader.read());
         return (char) fileReader.read();
     }
+
+    //2개만 읽기
 
     public String read2Chars(String filename) throws IOException {
         FileReader fileReader = new FileReader(filename);
@@ -33,10 +36,38 @@ public class FIleExercise {
         return str;
     }
 
+    //n개만큼 읽기
+
+    public String readNChars(String filename, int num) throws IOException {
+        FileReader fileReader = new FileReader(filename);
+        String str = "";
+        if(num > filename.length()){
+            System.out.println("출력 할 수 있는 글자수를 초과하였습니다.");
+        }
+        else{
+            for(int i = 0; i < num; i ++){
+                str += (char)fileReader.read();
+            }
+        }
+        return str;
+    }
+
+    public String readline(String filename) throws IOException {
+        FileReader fileReader = new FileReader(filename);
+        String str = "";
+
+       // str += (char)fileReader.;
+
+        return str;
+    }
+
     public static void main(String[] args) throws IOException {
         FIleExercise fIleExercise = new FIleExercise();
-        String str = fIleExercise.read2Chars("aa_file.txt");
-        //char c = fIleExercise.readAChar("aa_file.txt");
+//        String str = fIleExercise.read2Chars("aa_file.txt");
+//        char c = fIleExercise.readAChar("aa_file.txt");
+        String str = fIleExercise.readNChars("aa_file.txt", 4);
+
+
         System.out.println(str);
     }
 }
