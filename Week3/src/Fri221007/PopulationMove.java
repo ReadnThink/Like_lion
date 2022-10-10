@@ -4,14 +4,15 @@ public class PopulationMove {
     private int fromSido;
     private int toSido;
 
-    // constructor 추가 fromSido, toSido를 받아서 맴버변수에 넣는 기능
-    PopulationMove(int fromSido, int toSido){
+    public PopulationMove(int fromSido, int toSido) {
         this.fromSido = fromSido;
         this.toSido = toSido;
     }
 
-    //private로 선언된 필드는 getter, setter를 통해 접근해야한다.
-
+    public PopulationMove(String fromSido, String toSido) {
+        this.fromSido = Integer.parseInt(fromSido);
+        this.toSido = Integer.parseInt(toSido);
+    }
 
     public int getFromSido() {
         return fromSido;
@@ -20,5 +21,4 @@ public class PopulationMove {
     public int getToSido() {
         return toSido;
     }
-
 }
