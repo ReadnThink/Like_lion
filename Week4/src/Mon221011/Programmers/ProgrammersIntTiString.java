@@ -1,4 +1,4 @@
-package Mon221011;
+package Mon221011.Programmers;
 
 import java.util.Scanner;
 
