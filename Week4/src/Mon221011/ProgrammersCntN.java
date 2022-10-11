@@ -7,9 +7,9 @@ public class ProgrammersCntN {
 
         char[] result = new char[length];
         length--;
-        while(length != 0){
-            result[length] = (char) ((char) n % 10);
-            System.out.println(result[length]);
+        while(length >= 0){
+            int k = (n % 10) + 48;
+            result[length] = (char) k;
             n /= 10;
             length--;
         }
