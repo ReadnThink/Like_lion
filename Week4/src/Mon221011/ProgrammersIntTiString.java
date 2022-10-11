@@ -2,7 +2,7 @@ package Mon221011;
 
 import java.util.Scanner;
 
-public class ProgrammersCntN {
+public class ProgrammersIntTiString {
     public char[] sum(int n, int length){
 
         char[] result = new char[length];
@@ -27,7 +27,7 @@ public class ProgrammersCntN {
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        ProgrammersCntN programmersCntN = new ProgrammersCntN();
+        ProgrammersIntTiString programmersCntN = new ProgrammersIntTiString();
 
         int n = sc.nextInt();
         int length = programmersCntN.length(n);
