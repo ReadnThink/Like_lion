@@ -6,8 +6,7 @@ public class ProgrammersCntN2 {
     public int sum(int n){
         int result = 0;
         while(n != 0){
-            int k = n % 10;
-            result +=  k;
+            result +=  n % 10;
             n /= 10;
         }
         return result;
