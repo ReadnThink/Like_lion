@@ -8,7 +8,7 @@ public class Max1 {
         Scanner sc = new Scanner(System.in);
         int max = arr[0]; //max값은 배열안만 에서 정하는 것이 좋다.
         int index = 0;
-        for(int i = 0; i < 9; i++){
+        for(int i = 1; i < 9; i++){
             arr[i] = sc.nextInt();
             if(arr[i] > max){
                 max = arr[i];
