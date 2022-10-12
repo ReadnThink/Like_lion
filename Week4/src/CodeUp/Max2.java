@@ -3,12 +3,10 @@ package CodeUp;
 import java.util.Scanner;
 
 public class Max2 {
-    public static void main(String[] args) {
+    public int[][] FindArr(int[][] arr){
         Scanner sc = new Scanner(System.in);
 
-        int[][] arr = new int[9][9];
-
-        int max = 0;
+        int max = arr[0][0]; //max값은 배열안만 에서 정하는 것이 좋다.
         int index_i = 0;
         int index_j = 0;
 
@@ -28,5 +26,16 @@ public class Max2 {
         System.out.println(max);
         System.out.print(index_i + " " + index_j);
 
+
+
+        return arr;
+    }
+
+
+    public static void main(String[] args) {
+        int[][] arr = new int[9][9];
+
+        Max2 max = new Max2();
+        max.FindArr(arr);
     }
 }
