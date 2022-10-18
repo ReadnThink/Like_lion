@@ -1,11 +1,13 @@
+package Mon221018;
+
 import java.util.Scanner;
 
-public class PyramidTeachers {
+public class Pyramid {
     private String letter = "*";
 
-    public PyramidTeachers(){}
+    public Pyramid(){}
 
-    public PyramidTeachers(String letter) {
+    public Pyramid(String letter) {
         this.letter = letter;
     }
 
@@ -20,14 +22,18 @@ public class PyramidTeachers {
                 System.out.print(" ");
             }
 
-            for (int k = 0; k < 2 * i + 1; k++) { //홀수개 출력
+            for (int k = 0; k <= i; k++) {
+                System.out.print(this.letter);
+            }
+
+            for (int j = 0; j < i; j++){
                 System.out.print(this.letter);
             }
             System.out.println();
         }
     }
     public static void main(String[] args) {
-        PyramidTeachers pyramid = new PyramidTeachers();
+        Pyramid pyramid = new Pyramid();
         pyramid.printStar();
     }
 }

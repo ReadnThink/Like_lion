@@ -1,7 +1,6 @@
 package Thu221006.Map;
 
 import java.util.HashMap;
-import java.util.Locale;
 
 public class AlphabetCnt {
     public boolean isAlphabet(char a){
