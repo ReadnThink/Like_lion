@@ -1,16 +1,16 @@
 package com.dao;
 
 public class DaoFactory {
-    private ConnectionMaker connectionMaker(){
+    private UserDao connectionMaker(){
         LocalConnectionMaker localConnectionMaker = new LocalConnectionMaker();
-        return localConnectionMaker;
+        UserDao userDao = new UserDao(localConnectionMaker);
+        return userDao;
 
     }
 
     public UserDao userDao(){
-
-        LocalConnectionMaker localConnectionMaker = new LocalConnectionMaker();
-        UserDao userDao = new UserDao(connectionMaker());
+        AWSConnectionMaker awsConnectionMaker = new AWSConnectionMaker();
+        UserDao userDao = new UserDao(awsConnectionMaker);
 
         return userDao;
     }
