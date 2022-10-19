@@ -5,7 +5,7 @@ public class DaoFactory {
         LocalConnectionMaker localConnectionMaker = new LocalConnectionMaker();
         return localConnectionMaker;
 
-    }ㅕ
+    }
 
     public UserDao userDao(){
 
