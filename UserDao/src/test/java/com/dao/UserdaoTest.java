@@ -13,33 +13,21 @@ import java.sql.SQLException;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = DaoFactory.class) //해당 클래스만 특정해서 불러온다.
+@ContextConfiguration(classes = DaoFactory.class)
 class UserdaoTest {
     @Autowired
     ApplicationContext context;
 
     @Test
     void addAndGet() throws SQLException, ClassNotFoundException {
-        UserDao userDao = context.getBean("awsUserDao", UserDao.class);
-        UserDao userDao2 = context.getBean("awsUserDao", UserDao.class);
-
-        System.out.println(userDao);
-        System.out.println(userDao2);
-
-        User user = new User();
+        UserDao userDao = context.getBean("localUserDao", UserDao.class);
 
         String id = "4";
+        userDao.add(new User(id,"Nunu","112233"));
 
-//        user.setId(id);
-//        user.setName("sols");
-//        user.setPassword("1123");
-//
-//        userDao.add(user);
-//
-//        User result = userDao.select(id);
-//        System.out.println(result.getId());
-//        System.out.println(result.getName());
-//        assertEquals(id, result.getId());
+        User user = userDao.select(id);
+        assertEquals(id, user.getId());
+        assertEquals("Nunu", user.getName());
 
 
     }

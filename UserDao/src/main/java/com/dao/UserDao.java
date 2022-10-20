@@ -12,6 +12,16 @@ public class UserDao {
     }
 
 
+    public void deleteAll() throws SQLException, ClassNotFoundException {
+        Connection c = null;
+        PreparedStatement pstmt;
+            c = connectionMaker.mekeConnection();
+            pstmt = c.prepareStatement("DELETE FROM users");
+            pstmt.executeUpdate();
+            pstmt.close();
+            c.close();
+    }
+
     public void add(User user) throws ClassNotFoundException, SQLException {
         Connection c = connectionMaker.mekeConnection();
         // 명령문을 대입한다. (executeUpdate 해야한다.)
