@@ -44,4 +44,11 @@ public class Stack02 {
     public boolean isFull() {
         return this.top == this.arr.length -1;
     }
+
+    public int peek() {
+        if(isEmpty()){
+            throw new EmptyStackException();
+        }
+        return arr[top];
+    }
 }

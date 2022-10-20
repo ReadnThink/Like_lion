@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.EmptyStackException;
 import java.util.Stack;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -64,6 +65,15 @@ class Stack02Test {
         assertThrows(RuntimeException.class, () ->{
             stack02.push(20);
         });
+    }
+
+    @Test
+    void peek(){
+        assertThrows(EmptyStackException.class, () ->{
+            stack02.peek();
+        });
+        stack02.push(10);
+        assertEquals(10,stack02.peek());
     }
 
 }
