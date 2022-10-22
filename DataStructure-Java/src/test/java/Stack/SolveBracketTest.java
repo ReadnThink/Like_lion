@@ -10,7 +10,7 @@ class SolveBracketTest {
     @DisplayName("괄호가 잘 풀리는지")
     void bracket() {
         SolveBracket solveBracket = new SolveBracket();
-        assertTrue(solveBracket.solution1("()()"));
+        assertTrue(solveBracket.solution("()()"));
 //        assertTrue(solveBracket.solution("(())()"));
 //        assertTrue(solveBracket.solution(")()("));
 //        assertTrue(solveBracket.solution("(()("));

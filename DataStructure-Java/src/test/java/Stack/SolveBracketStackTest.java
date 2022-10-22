@@ -6,9 +6,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SolveBracketStackTest {
     @Test
-    void StackBraket() {
-        SolveBracketStack solveBracket = new SolveBracketStack();
-        assertTrue(solveBracket.solution("()()"));
+    void braket() {
+        SolveBracketStack solveBracketStack = new SolveBracketStack();
+        assertTrue(solveBracketStack.solution("()()"));
 //        assertTrue(solveBracket.solution("(())()"));
 //        assertTrue(solveBracket.solution(")()("));
 //        assertTrue(solveBracket.solution("(()("));
